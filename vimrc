@@ -28,6 +28,10 @@ colorscheme tender
 
 set makeprg=g++\ -std=c++17\ -g\ -Wshadow\ -Wextra\ -DLOCAL\ -pedantic\ -o\ %<\ %\ -fmax-errors=2\ -fsanitize=address\ -fsanitize=undefined\ -D__GLIBCXX_DEBUG 
 
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {{ {
+inoremap {} {}
 
 map <F8> :make <CR> :cw <CR>
 map <F5> :!./%< <CR>
@@ -44,12 +48,10 @@ au filetype cpp setlocal commentstring=//\ %s
 au QuickFixCmdPost [^l]* nested cwindow
 au QuickFixCmdPost    l* nested lwindow
 
-
 " termdegug
 packadd termdebug
 let g:termdebug_wide=1
 map <silent> <leader>d :Termdebug<cr>
-
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
