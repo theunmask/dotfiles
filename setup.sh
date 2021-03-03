@@ -13,4 +13,5 @@ sudo apt install -y gnome-tweak-tool
 ln -s /home/nurbek/dotfiles/vimrc /home/nurbek/.vimrc
 ln -s /home/nurbek/dotfiles/bash_aliases /home/nurbek/.bash_aliases
 
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
